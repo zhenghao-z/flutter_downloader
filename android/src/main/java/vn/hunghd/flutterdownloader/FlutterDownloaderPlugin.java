@@ -113,7 +113,7 @@ public class FlutterDownloaderPlugin implements MethodCallHandler, FlutterPlugin
         WorkRequest request = new OneTimeWorkRequest.Builder(DownloadWorker.class)
                 .setConstraints(new Constraints.Builder()
                         .setRequiresStorageNotLow(requiresStorageNotLow)
-                        .setRequiredNetworkType(NetworkType.CONNECTED)
+//                         .setRequiredNetworkType(NetworkType.CONNECTED)
                         .build())
                 .addTag(TAG)
                 .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 10, TimeUnit.SECONDS)
